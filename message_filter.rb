@@ -2,5 +2,7 @@
 # 勉強用。RSpecの実際の作成過程を学ぶ
 
 class MessageFilter
-
+  def initialize(word)
+    @word = word
+  end  
 end
