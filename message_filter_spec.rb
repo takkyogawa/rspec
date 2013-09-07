@@ -13,7 +13,7 @@ require 'message_filter'
 describe MessageFilter do
 
   # test data
-  before(:each) do
+  before do
     @filter = MessageFilter.new('foo')
   end
 
