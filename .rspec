@@ -1,0 +1,8 @@
+# this file is made for rspec default options
+# located at ror directory ,so that only validate in this directory
+
+# default option for colors
+--color
+
+# default option for showing details
+--format documentation

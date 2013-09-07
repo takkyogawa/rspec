@@ -8,6 +8,7 @@ $:.unshift File.dirname(__FILE__)
 
 require 'rubygems'
 require 'rspec'
+require 'message_filter'
 
-describe MssageFilter do
+describe MessageFilter do
 end
