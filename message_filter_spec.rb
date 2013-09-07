@@ -12,14 +12,17 @@ require 'message_filter'
 
 describe MessageFilter do
 
+  # test data
+  before(:each) do
+    @filter = MessageFilter.new('foo')
+  end
+
   it 'NGワードを検出できるようにする。#for fake it' do
-    filter = MessageFilter.new('foo')
-    expect(filter.detect?('hello my foo')).to be_true
+    expect(@filter.detect?('hello my foo')).to be_true
   end
   
   it 'フィルタに一致しないとfalseを返す。#for triangulation' do
-    filter = MessageFilter.new('foo')
-    expect(filter.detect?('hello world')).to be_false
+    expect(@filter.detect?('hello world')).to be_false
   end
   
 end
