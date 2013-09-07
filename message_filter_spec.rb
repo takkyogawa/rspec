@@ -11,8 +11,15 @@ require 'rspec'
 require 'message_filter'
 
 describe MessageFilter do
-  it 'NGワードを検出できるようにする。' do
+
+  it 'NGワードを検出できるようにする。#for fake it' do
     filter = MessageFilter.new('foo')
     expect(filter.detect?('hello my foo')).to be_true
   end
+  
+  it 'フィルタに一致しないとfalseを返す。#for triangulation' do
+    filter = MessageFilter.new('foo')
+    expect(filter.detect?('hello world')).to be_false
+  end
+  
 end
