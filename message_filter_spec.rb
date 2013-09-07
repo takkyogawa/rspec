@@ -11,4 +11,8 @@ require 'rspec'
 require 'message_filter'
 
 describe MessageFilter do
+  it 'NGワードを検出できるようにする。' do
+    filter = MessageFilter.new('foo')
+    expect(filter.detect?('hello my foo')).to be_true
+  end
 end
