@@ -19,14 +19,12 @@ describe MessageFilter do
       @filter = MessageFilter.new('foo')
     end
   
-    subject{@filter}
-  
     it{
-      expect().to be_detect('hello my foo')
+      expect(@filter).to be_detect('hello my foo')
     }
     
     it{
-      expect().not_to be_detect('hello world')
+      expect( @filter).not_to be_detect('hello world')
     }
   
   end
