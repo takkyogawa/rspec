@@ -12,17 +12,21 @@ require 'message_filter'
 
 describe MessageFilter do
 
-  # test data
-  before do
-    @filter = MessageFilter.new('foo')
-  end
+  context 'with filter foo' do
 
-  it{
-    expect(@filter).to be_detect('hello my foo')
-  }
+    # test data
+    before do
+      @filter = MessageFilter.new('foo')
+    end
   
-  it{
-    expect(@filter).not_to be_detect('hello world')
-  }
+    it{
+      expect(@filter).to be_detect('hello my foo')
+    }
+    
+    it{
+      expect(@filter).not_to be_detect('hello world')
+    }
+  
+  end
   
 end
